@@ -25,3 +25,9 @@ logoHeading.addEventListener("dblclick", () => {
     logoHeading.textContent = "What, you don't like honking?"
 })
 
+const imgContent = document.querySelector(".img-content img");
+
+//resize - 5
+window.addEventListener("resize", () => {
+    imgContent.src="https://pbs.twimg.com/media/DkuFJdiX0AAymjI.jpg";
+})
