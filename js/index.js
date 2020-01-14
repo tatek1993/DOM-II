@@ -18,16 +18,35 @@ const logoHeading = document.querySelector(".logo-heading");
 
 //click - 3
 logoHeading.addEventListener("click", () =>{
-    logoHeading.textContent = "Eyy Honk Honk, Baby!"
+    logoHeading.textContent = "Gotcha! We doin taxidermy now, baby!"
 })
 //double click - 4
 logoHeading.addEventListener("dblclick", () => {
-    logoHeading.textContent = "What, you don't like honking?"
+    logoHeading.textContent = "Horrible, awful, taxidermy!"
 })
 
-const imgContent = document.querySelector(".img-content img");
-
+const imgContent = document.querySelectorAll(".img-content img");
 //resize - 5
 window.addEventListener("resize", () => {
-    imgContent.src="https://pbs.twimg.com/media/DkuFJdiX0AAymjI.jpg";
+    imgContent[0].src="https://pbs.twimg.com/media/DkuFJdiX0AAymjI.jpg";
 })
+
+const body = document.querySelector('body');
+
+//scroll - 6
+window.addEventListener("scroll", () => {
+  body.style.backgroundColor ="sandybrown";
+}) 
+
+//drag - 7
+imgContent[1].addEventListener("drag", () => {
+    imgContent[1].src="https://pbs.twimg.com/media/EClVLecWwAAQFKN.jpg:large";
+
+}) 
+
+//contextmenu
+const bottomImg = document.querySelector('.content-destination img');
+bottomImg.addEventListener("contextmenu", () => {
+    bottomImg.src="https://img.srgcdn.com/e//V1JBbnlxNUFiMHNaTGJXUHl4NDIucG5n.jpg";
+})
+
