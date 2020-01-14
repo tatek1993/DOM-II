@@ -57,19 +57,30 @@ bottomImg.addEventListener("mouseover", () => {
 })
 
 const destinationText = document.querySelectorAll(".destination p");
+const defaultText = [];
+
+for (let i = 0; i < destinationText.length; i++){
+    defaultText[i] = destinationText[i].textContent;
+}
+
 // console.log(destinationText);\
 //keydown - 9
 window .addEventListener("keydown", (event) => {
     // console.log(event); 
-    destinationText[0].style.fontWeight = "bold";
-    destinationText[1].style.textDecoration = "underline";
-    destinationText[2].style.fontStyle= "italic";
+    for (let i = 0; i < destinationText.length; i++){
+        // destinationText[i].textContent = siteContent.nav['nav-item-'+(i+1)]
+        destinationText[i].textContent = "You probably thought this Deer was alive. And this coyote was alive. And this Pheasant was alive? NOPE! No they’re not! They’re dead! They have been taxidermized by Chuck Testa. Ojai Valley Taxidermy Ojai, California 93023. I speacialize in the most life like dead animals anywhere. Peroid.Look at that Antelope driving a car! Nope! It’s just Chuck Testa.Oh no, there’s a bear in my bed! Nope! Chuck Testa.Hold on a second. There’s a Leopard feeding on an Impala out on my deck. Nope! It’s just Chuck Testa with another realistic mount. Ship to me from anywhere! (ship from anywhere!) Call Chuck Testa for the most life like dead animals around. Period.Did that Rhino just order a drink? Nope! Chuck Testa does not taxidermize pets!";
+        destinationText[i].style.color = "green";
+        destinationText[i].style.fontWeight = "bolder";
+      }
 })
 //keyup - 10
 window .addEventListener("keyup", () => {
-    destinationText[0].style.fontWeight = "normal";
-    destinationText[1].style.textDecoration = "none";
-    destinationText[2].style.fontStyle= "normal";
+    for (let i = 0; i < destinationText.length; i++){
+        destinationText[i].textContent = defaultText[i];
+        destinationText[i].style.color = "black";
+        destinationText[i].style.fontWeight = "normal";
+    }
 })
 
 //preventDefault
