@@ -4,7 +4,7 @@ const wiggleBus = document.querySelector(".intro img")
 
 //mouse enter - 1
 wiggleBus.addEventListener("mouseenter", () => {
-    wiggleBus.style.transform = "scale(1.5)";
+    wiggleBus.style.transform = "scale(1.1)";
     wiggleBus.style.transition = "transform 0.2s"
 })
 
@@ -41,12 +41,26 @@ window.addEventListener("scroll", () => {
 //drag - 7
 imgContent[1].addEventListener("drag", () => {
     imgContent[1].src="https://pbs.twimg.com/media/EClVLecWwAAQFKN.jpg:large";
-
 }) 
 
-//contextmenu
+//contextmenu - 8
 const bottomImg = document.querySelector('.content-destination img');
 bottomImg.addEventListener("contextmenu", () => {
     bottomImg.src="https://img.srgcdn.com/e//V1JBbnlxNUFiMHNaTGJXUHl4NDIucG5n.jpg";
 })
 
+const destinationText = document.querySelectorAll(".destination p");
+// console.log(destinationText);\
+//keydown - 9
+window .addEventListener("keydown", (event) => {
+    // console.log(event);
+    destinationText[0].style.fontWeight = "bold";
+    destinationText[1].style.textDecoration = "underline";
+    destinationText[2].style.fontStyle= "italic";
+})
+//keyup - 10
+window .addEventListener("keyup", () => {
+    destinationText[0].style.fontWeight = "normal";
+    destinationText[1].style.textDecoration = "none";
+    destinationText[2].style.fontStyle= "normal";
+})
